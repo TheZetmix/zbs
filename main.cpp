@@ -15,6 +15,7 @@ public:
     string           compiler = "g++"; // g++ by default
     vector<string>   compiler_options;
     vector<string>   defines;
+    vector<string>   cmds;
 };
 
 class bsconfigParser {
@@ -74,6 +75,8 @@ public:
                 current_config.compiler_options.push_back(line);
             } else if (current_section == "[defines]") {
                 current_config.defines.push_back(line);
+            } else if (current_section == "[cmds]") {
+                current_config.cmds.push_back(line);
             }
         }
         
@@ -121,6 +124,11 @@ int main(int argc, char** argv) {
         
         zbs::log(generated_cmd);
         system(generated_cmd.c_str());
+        
+        for (auto cmd : i.cmds) {
+            zbs::log(cmd);
+            system(cmd.c_str());
+        }
     }
     
     return 0;
