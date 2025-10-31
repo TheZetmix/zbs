@@ -1,0 +1,6 @@
+[config main]
+[output]
+zbs
+
+[sources]
+main.cpp
