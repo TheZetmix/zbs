@@ -45,7 +45,7 @@ It prints build commands and compiles your project.
 
 ## `.zbsconfig` structure
 
-[config <name>] — new configuration
+[config `name`] — new configuration
 
 [sources] — source files
 
