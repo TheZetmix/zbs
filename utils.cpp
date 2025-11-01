@@ -4,7 +4,7 @@ using namespace std;
 
 namespace zbs {
     void error(string msg) {
-        cout << "zbs error: " << msg << '\n';
+        cout << "[ERROR]: " << msg << '\n';
         exit(1);
     }
     
