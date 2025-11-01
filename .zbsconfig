@@ -1,6 +1,13 @@
-[config main]
+[config build]
 [output]
 zbs
 
 [sources]
 main.cpp
+
+[config install]
+[no-execute]
+[no-autogen]
+
+[cmds]
+cp ./zbs /sbin/
